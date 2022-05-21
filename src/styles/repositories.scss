@@ -5,49 +5,48 @@ section.repository-list {
     margin-bottom: 16px;
   }
 
-  ul {
-    list-style: none;
+  .options-search-selected {
+    max-width: 300px;
+    height: 40px;
+    margin: 10px 0;
 
-    li {
-      width: fit-content;
-      background: #eee;
-      border-radius: 8px;
-      padding: 16px;
+    display: flex;
+    justify-content: space-between;
 
-      display: flex;
-      gap: 20px;
+    button {
+      border: 0;
+      width: 48%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
 
-      & + li {
-        margin-top: 20px;
-      }
-
-      p {
-        font-size: 14px;
-        color: #444;
-        margin-top: 8px;
-      }
-
-      a {
-        display: inline-block;
-        margin-top: 16px;
-        text-decoration: none;
-        color: #8257e6;
-
-        button {
-          padding: 8px;
-          border: 0;
-          border-radius: 6px;
-          background-color: rgb(122, 119, 119);
-          color: #fff;
-          cursor: pointer;
-
-          transition: filter 0.2s;
-
-          &:hover {
-            filter: brightness(0.9);
-          }
-        }
+      &.is-active {
+        background-color: #bbb;
       }
     }
+  }
+
+  .block-input-search {
+    max-width: 300px;
+    height: 40px;
+    margin: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 68%;
+      padding: 10px;
+    }
+
+    button {
+      width: 28%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
