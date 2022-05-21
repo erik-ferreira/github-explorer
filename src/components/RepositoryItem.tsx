@@ -1,5 +1,7 @@
 import { Repository } from "./RepositoryList";
 
+import "../styles/repositoryItem.scss";
+
 interface RepositoryItemProps {
   repository: Repository;
 }
